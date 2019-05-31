@@ -42,13 +42,9 @@ Calculations are based on the following ratios:
 1. Clone this repository.
 2. Run ```npm install```.
 3. To run the tests,run ```npm test```.
-4. To run the application, run ```npm run start```.
-
 
 ## Known Issues
-* A stylist can be added multiple times to a specialty.
-* A specialty can be added multiple times to a stylist.
-* Currently, there is no way to switch a client to another stylist.
+* No known issues at this time.
 
 ## Technologies Used
 
