@@ -109,6 +109,6 @@ describe('AgeCalculator', function() {
     let planet = 'Jupiter';
     let age = 82;
     let calculator = new AgeCalculator(age, lifeExpectancy, planet);
-    expect(calculator.calculateAge()[2]).toEqual(`You have lived 0 years past life expectancy on ${planet}.`);
+    expect(calculator.calculateAge()[2]).toEqual(`You are the same age as your life expectancy on ${planet}.`);
   });
 })

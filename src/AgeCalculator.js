@@ -30,10 +30,16 @@ export class AgeCalculator {
     } else {
       let extraLife = Math.floor((this.age - this.lifeExpectancy) / factor);
       let plural = '';
+      
       if (extraLife !== 1){
         plural = 's';
       }
-      lifeExpectancyStatement = `You have lived ${extraLife} year${plural} past life expectancy on ${this.planet}.`;
+      if (extraLife === 0)
+      {
+        lifeExpectancyStatement = `You are the same age as your life expectancy on ${this.planet}.`;
+      } else {
+        lifeExpectancyStatement = `You have lived ${extraLife} year${plural} past life expectancy on ${this.planet}.`;
+      }    
     }
 
     return [calculatedAge, calculatedLifeExpectancy, lifeExpectancyStatement];
