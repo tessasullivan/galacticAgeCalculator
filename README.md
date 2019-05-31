@@ -11,22 +11,22 @@ This application will inform the user how old they are on Mercury, Venus, Mars, 
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| User can see age on Mercury | Age on Earth: 34 | 141.67 |
-| User can see age on Venus | Age on Earth: 34 | 54.84 |
-| User can see age on Mars | Age on Earth: 34 | 18.09 |
-| User can see age on Jupiter | Age on Earth: 34 | 2.87 |
-| User can see life expectancy on Mercury | Life expectancy on Earth: 79.4 | 330.83 |
-| User can see life expectancy on Venus | Life expectancy on Earth: 79.4 | 128.06 |
-| User can see life expectancy on Mars | Life expectancy on Earth: 79.4 | 42.23 |
-| User can see life expectancy on Jupiter | Life expectancy on Earth: 79.4 | 6.69 |
-| User sees number of years they have lived past life expectancy (if applicable) on Mercury | 80 | |
-| User sees number of years they have lived past life expectancy (if applicable) on Venus | 80 | |
-| User sees number of years they have lived past life expectancy (if applicable) on Mars | 80 | |
-| User sees number of years they have lived past life expectancy (if applicable) on Jupiter | 80 | |
+| User can see age on Mercury | Age on Earth: 34 | 141 |
+| User can see age on Venus | Age on Earth: 34 | 54 |
+| User can see age on Mars | Age on Earth: 34 | 18 |
+| User can see age on Jupiter | Age on Earth: 34 | 2 |
+| User can see life expectancy on Mercury | Life expectancy on Earth: 79 | 330 |
+| User can see life expectancy on Venus | Life expectancy on Earth: 79 | 128 |
+| User can see life expectancy on Mars | Life expectancy on Earth: 79 | 42 |
+| User can see life expectancy on Jupiter | Life expectancy on Earth: 79 | 6 |
+| User sees number of years they have lived past life expectancy (if applicable) on Mercury | 82 | |
+| User sees number of years they have lived past life expectancy (if applicable) on Venus | 82 | |
+| User sees number of years they have lived past life expectancy (if applicable) on Mars | 82 | |
+| User sees number of years they have lived past life expectancy (if applicable) on Jupiter | 82 | |
 
 ### Future enhancements
 | User can see age on all included planets | Age on Earth: 34 | Results for all 4 planets are listed in table form |
-| User can see life expectancy on all planets | Life expectancy on Earth: 79.4 | Results for all 4 planets are listed in table form |
+| User can see life expectancy on all planets | Life expectancy on Earth: 79 | Results for all 4 planets are listed in table form |
 
 
 #### Calculations
