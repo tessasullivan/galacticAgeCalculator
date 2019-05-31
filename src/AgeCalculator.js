@@ -28,8 +28,12 @@ export class AgeCalculator {
     if (this.lifeExpectancy > this.age) {
       lifeExpectancyStatement = `Your life expectancy on ${this.planet} is ${calculatedLifeExpectancy} years.`;
     } else {
-      // lifeExpectancyStatement = `You have lived ${calculatedAge - calculatedLifeExpectancy} years past life expectancy on ${this.planet}.`;
-      lifeExpectancyStatement = `You have lived ${Math.floor((this.age - this.lifeExpectancy) / factor)} years past life expectancy on ${this.planet}.`;
+      let extraLife = Math.floor((this.age - this.lifeExpectancy) / factor);
+      let plural = '';
+      if (extraLife !== 1){
+        plural = 's';
+      }
+      lifeExpectancyStatement = `You have lived ${extraLife} year${plural} past life expectancy on ${this.planet}.`;
     }
 
     return [calculatedAge, calculatedLifeExpectancy, lifeExpectancyStatement];

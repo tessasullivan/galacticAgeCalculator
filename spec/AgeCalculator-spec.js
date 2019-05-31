@@ -61,4 +61,29 @@ describe('AgeCalculator', function() {
     let calculator = new AgeCalculator(age, lifeExpectancy, planet);
     expect(calculator.calculateAge()[2]).toEqual(`You have lived 4 years past life expectancy on ${planet}.`);
   });
+
+  it('should calculate age on Mars', function() {
+    let planet = 'Mars';
+    let calculator = new AgeCalculator(age, lifeExpectancy, planet);
+    expect(calculator.calculateAge()[0]).toEqual(18);
+  });
+
+  it('should calculate life expectancy on Mars', function() {
+    let planet = 'Mars';
+    let calculator = new AgeCalculator(age, lifeExpectancy, planet);
+    expect(calculator.calculateAge()[1]).toEqual(42);
+  });
+
+  it('should make a statement on life expectancy on Mars when age is less than life expectancy', function() {
+    let planet = 'Mars';
+    let calculator = new AgeCalculator(age, lifeExpectancy, planet);
+    expect(calculator.calculateAge()[2]).toEqual(`Your life expectancy on ${planet} is 42 years.`);
+  });
+
+  it('should make a statement on life expectancy on Mars when age is more than life expectancy', function() {
+    let planet = 'Mars';
+    let age = 82;
+    let calculator = new AgeCalculator(age, lifeExpectancy, planet);
+    expect(calculator.calculateAge()[2]).toEqual(`You have lived 1 year past life expectancy on ${planet}.`);
+  });
 })
