@@ -43,12 +43,12 @@ describe('AgeCalculator', function() {
     let calculator = new AgeCalculator(birthdate, lifeExpectancy, planet);
     expect(calculator.determineLifeExpectancy()).toEqual(`You are the same age as your life expectancy on ${planet}.`);
   });
-  
-//   it('should calculate age on Venus', function() {
-//     let planet = 'Venus';
-//     let calculator = new AgeCalculator(birthdate, lifeExpectancy, planet);
-//     expect(calculator.calculateAge()[0]).toEqual(54);
-//   });
+
+  it('should calculate age on Venus', function() {
+    let planet = 'Venus';
+    let calculator = new AgeCalculator(birthdate, lifeExpectancy, planet);
+    expect(calculator.calculateAge()).toEqual(112.90);
+  });
 
 //   it('should calculate life expectancy on Venus', function() {
 //     let planet = 'Venus';
