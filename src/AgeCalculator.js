@@ -6,29 +6,21 @@ export class AgeCalculator {
   }
 
   calculateAge() {
-    let factor;
+    const ratio = {
+      Mercury: .24, 
+      Venus: .62,
+      Mars: 1.88,
+      Jupiter: 11.86
+    };
     let lifeExpectancyStatement;
-    switch (this.planet) {
-      case "Mercury":
-        factor = .24;
-        break;
-      case "Venus":
-        factor = .62;
-        break;
-      case "Mars":
-        factor = 1.88;
-        break;
-      case "Jupiter":
-        factor = 11.86;
-        break;
-    }
-    let calculatedAge = Math.floor(this.age / factor);
-    let calculatedLifeExpectancy = Math.floor(this.lifeExpectancy / factor);
+
+    let calculatedAge = Math.floor(this.age / ratio[this.planet]);
+    let calculatedLifeExpectancy = Math.floor(this.lifeExpectancy / ratio[this.planet]);
 
     if (this.lifeExpectancy > this.age) {
       lifeExpectancyStatement = `Your life expectancy on ${this.planet} is ${calculatedLifeExpectancy} years.`;
     } else {
-      let extraLife = Math.floor((this.age - this.lifeExpectancy) / factor);
+      let extraLife = Math.floor((this.age - this.lifeExpectancy) / ratio[this.planet]);
       let plural = '';
       
       if (extraLife !== 1){
