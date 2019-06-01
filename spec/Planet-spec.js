@@ -1,25 +1,28 @@
-import { Planet, Earth } from './../src/Planet';
 
-describe('Planet', function() {
-  let birthdate;
-  let lifeExpectancy;
+/* this approach doesn't work */
 
-  beforeEach(function() {
-    birthdate = new Date('06/01/1949');
-    lifeExpectancy = 79;
-  });
+// import { Planet, Earth } from './../src/Planet';
 
-  it('should construct Earth based on birthdate and life expectancy', function() {
+// describe('Planet', function() {
+//   let birthdate;
+//   let lifeExpectancy;
 
-    let planetCalculator = new Earth(birthdate, lifeExpectancy);
-    expect(planetCalculator.birthdate).toEqual(birthdate);
-    expect(planetCalculator.lifeExpectancy).toEqual(79);
-  });
+//   beforeEach(function() {
+//     birthdate = new Date('06/01/1949');
+//     lifeExpectancy = 79;
+//   });
 
-  it('should calculate age on Earth', function() {
-    let planetCalculator = new Earth(birthdate, lifeExpectancy);
-    expect(planetCalculator.calculateAge()).toEqual(70);
-  });
+//   it('should construct Earth based on birthdate and life expectancy', function() {
+
+//     let planetCalculator = new Earth(birthdate, lifeExpectancy);
+//     expect(planetCalculator.birthdate).toEqual(birthdate);
+//     expect(planetCalculator.lifeExpectancy).toEqual(79);
+//   });
+
+//   it('should calculate age on Earth', function() {
+//     let planetCalculator = new Earth(birthdate, lifeExpectancy);
+//     expect(planetCalculator.calculateAge()).toEqual(70);
+//   });
 
 
   // it('should construct Planet based on birthdate, life expectancy, and planet', function() {
@@ -145,4 +148,4 @@ describe('Planet', function() {
   //   let planetCalculator = new Planet(birthdate, lifeExpectancy, planet);
   //   expect(planetCalculator.calculateAge()[2]).toEqual(`You are the same age as your life expectancy on ${planet}.`);
   // });
-})
+// })

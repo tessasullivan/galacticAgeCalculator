@@ -1,3 +1,6 @@
+// This approach doesn't work but I leave it here for future consideration.  I need some way 
+// for my methods to know what planet is calling it
+
 export class Planet {
   constructor(birthdate, lifeExpectancy) {
     this.birthdate = birthdate;
@@ -56,5 +59,11 @@ export class Planet {
 export class Earth extends Planet {
     constructor (birthdate, lifeExpectancy) {
       super(birthdate, lifeExpectancy);
+      const ratio = 1;
     }
+    calculateAge() {
+      let age = super.calculateAge();
+      return age / ratio;
+    }
+
 }
