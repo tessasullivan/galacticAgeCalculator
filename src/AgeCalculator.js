@@ -23,13 +23,13 @@ export class AgeCalculator {
       let extraLife = Math.floor((this.age - this.lifeExpectancy) / ratio[this.planet]);
       let plural = '';
       
-      if (extraLife !== 1){
-        plural = 's';
-      }
       if (extraLife === 0)
       {
         lifeExpectancyStatement = `You are the same age as your life expectancy on ${this.planet}.`;
       } else {
+        if (extraLife !== 1){
+          plural = 's';
+        }
         lifeExpectancyStatement = `You have lived ${extraLife} year${plural} past life expectancy on ${this.planet}.`;
       }    
     }
