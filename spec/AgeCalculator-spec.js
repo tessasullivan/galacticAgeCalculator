@@ -93,6 +93,13 @@ describe('AgeCalculator', function() {
     expect(calculator.determineLifeExpectancy()).toEqual(`You have lived 1.61 years past life expectancy on ${planet}.`);
   });
 
+  it('should make a statement on life expectancy on Venus when age same as life expectancy', function() {
+    birthdate.setFullYear(1940);
+    let planet = 'Venus';
+    let calculator = new AgeCalculator(birthdate, lifeExpectancy, planet);
+    expect(calculator.determineLifeExpectancy()).toEqual(`You are the same age as your life expectancy on ${planet}.`);
+  });
+
   it('should calculate age on Mars', function() {
     let planet = 'Mars';
     let calculator = new AgeCalculator(birthdate, lifeExpectancy, planet);
@@ -105,30 +112,28 @@ describe('AgeCalculator', function() {
     expect(calculator.determineLifeExpectancy()).toEqual(`Your life expectancy on ${planet} is 42.02 years.`);
   });
 
+  it('should calculate age on Jupiter', function() {
+    let planet = 'Jupiter';
+    let calculator = new AgeCalculator(birthdate, lifeExpectancy, planet);
+    expect(calculator.calculateAge()).toEqual(5.90);
+  });
 
+  it('should calculate life expectancy on Jupiter', function() {
+    let planet = 'Jupiter';
+    let calculator = new AgeCalculator(birthdate, lifeExpectancy, planet);
+    expect(calculator.calculateLifeExpectancy()).toEqual(6.66);
+  });
 
-//   it('should calculate age on Jupiter', function() {
-//     let planet = 'Jupiter';
-//     let calculator = new AgeCalculator(birthdate, lifeExpectancy, planet);
-//     expect(calculator.calculateAge()[0]).toEqual(2);
-//   });
+  it('should make a statement on life expectancy on Jupiter when age is less than life expectancy', function() {
+    let planet = 'Jupiter';
+    let calculator = new AgeCalculator(birthdate, lifeExpectancy, planet);
+    expect(calculator.determineLifeExpectancy()).toEqual(`Your life expectancy on ${planet} is 6.66 years.`);
+  });
 
-//   it('should calculate life expectancy on Jupiter', function() {
-//     let planet = 'Jupiter';
-//     let calculator = new AgeCalculator(birthdate, lifeExpectancy, planet);
-//     expect(calculator.calculateAge()[1]).toEqual(6);
-//   });
-
-//   it('should make a statement on life expectancy on Jupiter when age is less than life expectancy', function() {
-//     let planet = 'Jupiter';
-//     let calculator = new AgeCalculator(birthdate, lifeExpectancy, planet);
-//     expect(calculator.calculateAge()[2]).toEqual(`Your life expectancy on ${planet} is 6 years.`);
-//   });
-
-//   it('should make a statement on life expectancy on Jupiter when age is more than life expectancy', function() {
-//     let planet = 'Jupiter';
-//     let age = 82;
-//     let calculator = new AgeCalculator(birthdate, lifeExpectancy, planet);
-//     expect(calculator.calculateAge()[2]).toEqual(`You are the same age as your life expectancy on ${planet}.`);
-//   });
+  it('should make a statement on life expectancy on Jupiter when age is more than life expectancy', function() {
+    birthdate.setFullYear(1939);
+    let planet = 'Jupiter';
+    let calculator = new AgeCalculator(birthdate, lifeExpectancy, planet);
+    expect(calculator.determineLifeExpectancy()).toEqual(`You have lived 0.09 years past life expectancy on ${planet}.`);
+  });
 })
